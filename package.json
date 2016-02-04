@@ -1,0 +1,15 @@
+{
+  "name": "gender-helper",
+  "version": "0.0.0",
+  "description": "Replace gender-neutral tokens with gender-specific words.",
+  "keywords": [
+  ],
+  "activationHooks": ["language-text:grammar-used","language-gfm:grammar-used"],
+  "repository": "https://github.com/jbnv/gender-helper",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

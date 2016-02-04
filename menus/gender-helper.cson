@@ -1,0 +1,19 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'menu': [
+  {
+    'label': 'Edit'
+    'submenu': [
+      'label': 'Gender'
+      'submenu': [
+        {
+          'label': 'Make Male'
+          'command': 'gender-helper:male'
+        }
+        {
+          'label': 'Make Female'
+          'command': 'gender-helper:female'
+        }
+      ]
+    ]
+  }
+]
