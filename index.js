@@ -15,12 +15,32 @@ function getEditor() {
   return editor;
 }
 
+var transforms = [
+  ["he/she","he","she"],
+  ["his/hers","his","hers"],
+  ["his/her","his","her"],
+  ["him/her","him","her"],
+  ["He/she","He","She"],
+  ["His/her","His","Her"],
+  ["male/female","male","female"]
+];
+
+function transform(editor,index) {
+  content = editor.getText();
+  transforms.forEach(function (t) {
+    pattern = new RegExp(t[0],"g");
+    replacement = t[index];
+    content = content.replace(pattern,replacement);
+  })
+  editor.setText(content);
+}
+
 function makeMale() {
-  getEditor().insertText('male!');
+  transform(getEditor(),1);
 }
 
 function makeFemale() {
-  getEditor().insertText('female!');
+  transform(getEditor(),2);
 }
 
 module.exports = GenderHelper = {
